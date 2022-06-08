@@ -28,6 +28,14 @@ const handleUserInput = function (key) {
   if (key === 'd') {
     connection.write('Move: right');
   }
+  // implementing y as a special key to send canned message to the server
+  if (key === 'y') {
+    connection.write('Say: yum!');
+  }
+  // implementing h as a special key to send canned message to the server
+  if (key === 'h') {
+    connection.write('Say: hungry!');
+  }
   // if ctr1 + c is inputted, the game gets terminated
   if (key === '\u0003') {
     process.exit();
