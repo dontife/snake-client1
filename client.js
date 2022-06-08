@@ -11,7 +11,8 @@ const connect = function() {
 
   conn.on('connect', () => {
     //code that does something when the connection is first established
-    console.log('connected to server');
+    console.log('Successfully connected to game server');
+    conn.write('Name: ADB');
   });
   // implementing data handler to see message sent from the server
   conn.on('data', (data) => {
