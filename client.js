@@ -13,7 +13,11 @@ const connect = function() {
     //code that does something when the connection is first established
     console.log('Successfully connected to game server');
     conn.write('Name: ADB');
+    // setInterval(() => {
+    //   conn.write('Move: up');
+    // }, 500); 
   });
+  
   // implementing data handler to see message sent from the server
   conn.on('data', (data) => {
     console.log("Server says: ", data);
